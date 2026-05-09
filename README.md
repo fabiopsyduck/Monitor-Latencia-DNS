@@ -2,19 +2,16 @@
 
 **Descubra os servidores DNS mais rápidos para a sua conexão. Utilitário completo com interface amigável, ranking de velocidade e sistema de exclusão.**
 
-O **Monitor de Latência DNS** é uma ferramenta robusta desenvolvida em PowerShell com interface gráfica (WinForms) projetada para entusiastas de rede e usuários que buscam otimizar sua conexão de internet. Através de testes multithread precisos, a aplicação avalia a performance de diversos servidores DNS simultaneamente, ajudando você a escolher a melhor rota para sua navegação ou jogos.
+O **Monitor de Latência DNS** é uma ferramenta robusta desenvolvida em PowerShell com interface gráfica (WinForms) projetada para entusiastas de rede e usuários que buscam otimizar sua conexão de internet. Através de testes precisos, a aplicação avalia a performance de diversos servidores DNS, ajudando você a escolher a melhor rota para sua navegação ou jogos.
 
 ---
 
 ## 🚀 Funcionalidades
 
-- **Interface Gráfica Nativa:** UI fluida e responsiva com aceleração gráfica (Double Buffering) para evitar cintilação.
 - **Suporte Dual-Stack:** Gerenciamento e testes completos para servidores **IPv4** e **IPv6**.
-- **Testes Multithread:** Realiza resoluções DNS em segundo plano, permitindo que a interface permaneça responsiva durante o processo.
 - **Ranking de Performance:** Algoritmo inteligente que gera um ranking dos melhores servidores baseando-se na média, picos e estabilidade.
-- **Sistema de Lista Negra (Blacklist):** Filtre IPs instáveis ou sem resposta para que sejam ignorados em testes futuros.
+- **Sistema de Lista Negra (Blacklist):** Filtre IPs sem resposta para que sejam ignorados em testes futuros.
 - **Exportação de Dados:** Salve os resultados detalhados em arquivos `.txt` formatados.
-- **Instalação Simplificada:** Inclui uma lista de servidores DNS já montada e pronta para uso.
 
 ---
 
@@ -30,8 +27,12 @@ Interface de gerenciamento onde você pode selecionar, adicionar e editar seus s
 Monitoramento em tempo real com barras de progresso macro e micro, exibindo o status individual de cada servidor.
 ![Tela de Teste](test_screen.png)
 
-### 3. Gerenciamento de Lista Negra
-Controle total sobre IPs isolados por mau desempenho ou falta de resposta.
+### 3. Tela de Resultados
+Ranking detalhado com o desempenho de cada servidor testado, separado por categorias de latência.
+![Tela de Resultados](results.png)
+
+### 4. Gerenciamento de Lista Negra
+Controle total sobre os IPs isolados por falta de resposta.
 ![Lista Negra](blacklist.png)
 
 ---
