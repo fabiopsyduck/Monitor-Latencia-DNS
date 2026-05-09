@@ -8,10 +8,11 @@ O **Monitor de Latência DNS** é uma ferramenta robusta desenvolvida em PowerSh
 
 ## 🚀 Funcionalidades
 
-- **Suporte Dual-Stack:** Gerenciamento e testes completos para servidores **IPv4** e **IPv6**.
-- **Ranking de Performance:** Algoritmo inteligente que gera um ranking dos melhores servidores baseando-se na média, picos e estabilidade.
-- **Sistema de Lista Negra (Blacklist):** Filtre IPs sem resposta para que sejam ignorados em testes futuros.
-- **Exportação de Dados:** Salve os resultados detalhados em arquivos `.txt` formatados.
+- **Compatibilidade com Conexões Modernas (IPv4 e IPv6):** Gerenciamento e testes completos tanto para o padrão de internet atual (IPv4) quanto para o novo protocolo (IPv6), de forma simples e direta.
+- **Metodologia de Teste de Estresse:** O script realiza 100 medições consecutivas de tempo de resposta com um intervalo de apenas 25 milissegundos entre elas. Isso garante que o resultado não seja apenas uma "foto" momentânea, mas sim um filme real da estabilidade do servidor sob carga.
+- **Análise de Temperamento da Conexão:** O sistema fornece 5 métricas de tempo (Mínimo, Média-Mínima, Média, Média-Máxima e Máximo). Essa análise detalhada permite que o usuário entenda o "temperamento" da IP testada, identificando se o servidor sofre com oscilações (jitter) ou picos repentinos de lentidão.
+- **Sistema de Lista Negra (Blacklist):** Filtre automaticamente IPs sem resposta para que sejam ignorados em testes futuros, mantendo sua lista sempre limpa e funcional.
+- **Exportação de Dados:** Salve os resultados detalhados em arquivos `.txt` formatados para análise posterior ou compartilhamento.
 
 ---
 
@@ -24,15 +25,15 @@ Interface de gerenciamento onde você pode selecionar, adicionar e editar seus s
 ![Tela Principal](main.png)
 
 ### 2. Execução de Testes
-Monitoramento em tempo real com barras de progresso macro e micro, exibindo o status individual de cada servidor.
+Monitoramento em tempo real com barras de progresso macro e micro, exibindo o status individual de cada servidor durante a bateria de 100 testes.
 ![Tela de Teste](test_screen.png)
 
 ### 3. Tela de Resultados
-Ranking detalhado com o desempenho de cada servidor testado, separado por categorias de latência.
+Exibição das 5 métricas de tempo e classificação por cores, permitindo visualizar a estabilidade e o comportamento da IP.
 ![Tela de Resultados](results.png)
 
 ### 4. Gerenciamento de Lista Negra
-Controle total sobre os IPs isolados por falta de resposta.
+Controle total sobre os IPs isolados por falta de resposta durante os testes.
 ![Lista Negra](blacklist.png)
 
 ---
