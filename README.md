@@ -11,6 +11,7 @@ O **Monitor de Latência DNS** é uma ferramenta robusta desenvolvida em PowerSh
 - **Compatibilidade com Conexões Modernas (IPv4 e IPv6):** Gerenciamento e testes completos tanto para o padrão de internet atual (IPv4) quanto para o novo protocolo (IPv6), de forma simples e direta.
 - **Avaliação Rigorosa de Latência:** O script realiza 100 medições consecutivas de tempo de resposta com um intervalo de apenas 25 milissegundos entre elas. Essa abordagem estatística permite identificar flutuações e microquedas, entregando um diagnóstico muito mais confiável do que um 'ping' isolado.
 - **Análise de Temperamento da Conexão:** O sistema fornece 5 métricas de tempo (Mínimo, Média-Mínima, Média, Média-Máxima e Máximo). Essa análise detalhada permite que o usuário entenda o "temperamento" da IP testada, identificando se o servidor sofre com oscilações (jitter) ou picos repentinos de lentidão.
+- **Gráfico Visual de Estabilidade:** Ao clicar com o botão direito do mouse sobre qualquer resultado, um gráfico responsivo e de alta precisão é gerado. Ele mapeia o desempenho exato em todos os 100 testes, permitindo identificar com clareza os picos de instabilidade (jitter) em relação à linha média.
 - **Sistema de Lista Negra (Blacklist):** Filtre automaticamente IPs sem resposta para que sejam ignorados em testes futuros, mantendo sua lista sempre limpa e funcional.
 - **Exportação de Dados:** Salve os resultados detalhados em arquivos `.txt` formatados para análise posterior ou compartilhamento.
 
@@ -32,7 +33,11 @@ Monitoramento em tempo real com barras de progresso macro e micro durante a bate
 Exibição das 5 métricas de tempo e classificação por cores, permitindo visualizar a estabilidade e o comportamento da IP.
 ![Tela de Resultados](results.png)
 
-### 4. Gerenciamento de Lista Negra
+### 4. Gráfico de Estabilidade
+Análise visual da latência gerada com o botão direito do mouse, revelando o traçado exato dos 100 testes.
+![Gráfico de Estabilidade](grafico.png)
+
+### 5. Gerenciamento de Lista Negra
 Controle total sobre os IPs isolados por falta de resposta durante os testes.
 ![Lista Negra](blacklist.png)
 
@@ -40,9 +45,9 @@ Controle total sobre os IPs isolados por falta de resposta durante os testes.
 
 ## 📦 Como Usar
 
-1. **Script PowerShell:** Baixe o arquivo `Monitor_de_Latencia_(BetaV1).ps1` e execute-o com o botão direito -> *Run with PowerShell*.
+1. **Script PowerShell:** Baixe o arquivo `Monitor_de_Latencia_(BetaV2).ps1` e execute-o com o botão direito -> *Run with PowerShell*.
 2. **Servidores DNS:** Este repositório inclui o arquivo `Servidores_DNS.zip`. Para que o programa funcione corretamente, descompacte a pasta `Servidores_DNS` no mesmo diretório onde localizou o script ou o executável.
-3. **Versão Executável:** Se preferir não lidar com scripts, disponibilizei a versão `Monitor_de_Latencia_(BetaV1).exe`, já convertida para sua conveniência.
+3. **Versão Executável:** Se preferir não lidar com scripts, disponibilizei a versão `Monitor_de_Latencia_(BetaV2).exe`, já convertida para sua conveniência.
 
 ---
 
@@ -51,4 +56,4 @@ Controle total sobre os IPs isolados por falta de resposta durante os testes.
 Se desejar converter o script `.ps1` em um executável `.exe` por conta própria utilizando a ferramenta **ps2exe**, os seguintes parâmetros são **obrigatórios** para garantir o funcionamento da interface e dos símbolos especiais:
 
 ```powershell
-ps2exe.ps1 -inputFile .\Monitor_de_Latencia_(BetaV1).ps1 -outputFile .\Monitor_de_Latencia_(BetaV1).exe -supportOS -sta -noConsole -unicodeEncoding
+ps2exe.ps1 -inputFile .\Monitor_de_Latencia_(BetaV2).ps1 -outputFile .\Monitor_de_Latencia_(BetaV2).exe -supportOS -sta -noConsole -unicodeEncoding
